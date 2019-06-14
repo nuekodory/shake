@@ -50,10 +50,10 @@ struct HexTripletColor: Hashable {
         )
     }
 
-    var isGray: Bool {
+    func isGray(sumThreshold: Int) -> Bool {
         if abs(Int(self.red) - Int(self.green))
                    + abs(Int(self.green) - Int(self.blue))
-                   + abs(Int(self.blue) - Int(self.red)) < 32 {
+                   + abs(Int(self.blue) - Int(self.red)) < sumThreshold {
             return true
         } else {
             return false
@@ -92,6 +92,7 @@ struct ColorSelector {
     private var _hasColorSelected = false
     var maxCountGenerateTrial = 10000
     var thresholdDistanceSquare = 2000
+    var grayThresholdSum = 32
 
     var hasColorSelected: Bool {
         return _hasColorSelected
@@ -104,7 +105,7 @@ struct ColorSelector {
                 color = HexTripletColor()
                 continue
             } else {
-                if color.isGray {
+                if color.isGray(sumThreshold: grayThresholdSum) {
                     print("GRAY: \(color)")
                     color = HexTripletColor()
                     continue
