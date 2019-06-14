@@ -88,20 +88,15 @@ extension Sequence where Element == HexTripletColor {
 
 
 struct ColorSelector {
-    var advertisedColor = Set<HexTripletColor>()
-    private var _hasColorSelected = false
+    var selectedColor = Set<HexTripletColor>()
     var maxCountGenerateTrial = 10000
     var thresholdDistanceSquare = 2000
     var grayThresholdSum = 32
 
-    var hasColorSelected: Bool {
-        return _hasColorSelected
-    }
-
     mutating func generateColor() -> HexTripletColor {
         var color = HexTripletColor()
         for _ in 0...maxCountGenerateTrial {
-            if advertisedColor.isConflict(with: color, thresholdDistanceSquare: thresholdDistanceSquare) {
+            if selectedColor.isConflict(with: color, thresholdDistanceSquare: thresholdDistanceSquare) {
                 color = HexTripletColor()
                 continue
             } else {
@@ -110,11 +105,11 @@ struct ColorSelector {
                     color = HexTripletColor()
                     continue
                 } else {
-                    break
+                    selectedColor.insert(color)
+                    return color
                 }
             }
         }
-        _hasColorSelected = true
-        return color
+        return selectedColor.removeFirst()
     }
 }
