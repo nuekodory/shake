@@ -18,7 +18,7 @@ class GameScene: SKScene {
 
     private var colorSelector = ColorSelector()
     lazy var centralManager = CentralManager()
-    private var circleNodes = [SKShapeNode]()
+    private var circleNodes = Array<SKShapeNode>()
 
     let maxNumberOfCircles = 5
 
@@ -60,28 +60,22 @@ class GameScene: SKScene {
     
     
     func touchDown(atPoint pos : CGPoint) {
-        if let node = self.circleNode?.copy() as! SKShapeNode? {
-            var deletionNumber = max(0, circleNodes.count - maxNumberOfCircles - 1)
+        removeOldNode(nodes: &circleNodes, numNodesToKeep: 5)
 
-            for oldNode in self.circleNodes {
-                if deletionNumber <= 0 { break }
-                deletionNumber -= 1
-
-                oldNode.run(SKAction.sequence([SKAction.fadeOut(withDuration: 0.5), SKAction.removeFromParent()]))
-                self.circleNodes.removeAll(where: { n in n == oldNode })
-            }
-
+        if let newNode = self.circleNode?.copy() as! SKShapeNode? {
             let color = colorSelector.generateColor()
             colorSelector.advertisedColor.insert(color)
-            node.position = pos
-            node.fillColor = color.uiColor
-            self.addChild(node)
-            self.circleNodes.append(node)
+            newNode.position = pos
+            newNode.fillColor = color.uiColor
+            self.addChild(newNode)
+            self.circleNodes.append(newNode)
         }
     }
     
     func touchMoved(toPoint pos : CGPoint) {
-
+        if let currentNode = circleNodes.last {
+            currentNode.position = pos
+        }
     }
     
     func touchUp(atPoint pos : CGPoint) {
@@ -116,5 +110,20 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
+    }
+
+
+    @discardableResult
+    func removeOldNode(nodes: inout [SKShapeNode], numNodesToKeep keep: Int) -> Int {
+        let deletionNumber = max(0, circleNodes.count - keep - 1)
+
+        for _ in 0..<deletionNumber {
+            let oldestNode = nodes.removeFirst()
+            oldestNode.run(SKAction.sequence([
+                .group([.fadeOut(withDuration: 0.5), .scale(by: 0.0, duration: 0.5)]),
+                .removeFromParent()
+            ]))
+        }
+        return deletionNumber
     }
 }
