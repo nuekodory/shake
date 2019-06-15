@@ -5,11 +5,14 @@
 
 import Foundation
 import SpriteKit
+import CoreBluetooth
 
 
 class SKTouchableShapeNode: SKShapeNode {
+    var peripheralHandler: PeripheralHandler?
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-
+        peripheralHandler?.advertiseSelectedColor(color: HexTripletColor, duration: )
     }
 }

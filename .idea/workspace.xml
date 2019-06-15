@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c02974e-f582-4b4e-8f2c-4430a09d4b8f" name="Default Changelist" comment="minor: IDE files">
-      <change afterPath="$PROJECT_DIR$/shake/Touchable.swift" afterDir="false" />
+    <list default="true" id="1c02974e-f582-4b4e-8f2c-4430a09d4b8f" name="Default Changelist" comment="make iBeacon transmitter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shake.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/shake.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shake/ColorHandler.swift" beforeDir="false" afterPath="$PROJECT_DIR$/shake/ColorHandler.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shake/GameScene.swift" beforeDir="false" afterPath="$PROJECT_DIR$/shake/GameScene.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shake/PeripheralManager.swift" beforeDir="false" afterPath="$PROJECT_DIR$/shake/PeripheralManager.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shake/Touchable.swift" beforeDir="false" afterPath="$PROJECT_DIR$/shake/Touchable.swift" afterDir="false" />
     </list>
     <ignored path="$USER_HOME$/Library/Caches/AppCode2019.1/DerivedData/shake-cslnjqbzovssoqbsscbdtaveyxpv/Build/Intermediates.noindex/" />
     <ignored path="$USER_HOME$/Library/Caches/AppCode2019.1/DerivedData/shake-fnloqdzpbmsnptbrwwedspmawrtv/Build/Intermediates.noindex/" />
@@ -23,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shake/GameScene.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="136" column="5" lean-forward="true" selection-start-line="136" selection-start-column="5" selection-end-line="136" selection-end-column="5" />
+            <state relative-caret-position="173">
+              <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
               <folding>
                 <element signature="e#135#151#0" expanded="true" />
               </folding>
@@ -35,8 +34,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shake/Touchable.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="285">
+              <caret line="15" column="84" selection-start-line="15" selection-start-column="84" selection-end-line="15" selection-end-column="84" />
               <folding>
                 <element signature="e#102#119#0" expanded="true" />
               </folding>
@@ -44,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shake/ColorHandler.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2299">
-              <caret line="121" selection-start-line="121" selection-end-line="121" />
+            <state relative-caret-position="262">
+              <caret line="54" column="5" lean-forward="true" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
               <folding>
                 <element signature="e#102#119#0" expanded="true" />
               </folding>
@@ -59,7 +58,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shake/GameViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
+            <state relative-caret-position="-126">
               <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
               <folding>
                 <element signature="e#144#156#0" expanded="true" />
@@ -68,9 +67,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/shake/PeripheralManager.swift">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="28" column="87" selection-start-line="28" selection-start-column="87" selection-end-line="28" selection-end-column="87" />
+              <folding>
+                <element signature="e#0#17#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shake/IdentifierElements.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -113,11 +128,12 @@
         <option value="$PROJECT_DIR$/shake/UUIDv3v5.swift" />
         <option value="$PROJECT_DIR$/shake/CentralManager.swift" />
         <option value="$PROJECT_DIR$/shake/GenRandom.swift" />
-        <option value="$PROJECT_DIR$/shake/PeripheralManager.swift" />
-        <option value="$PROJECT_DIR$/shake/ColorHandler.swift" />
         <option value="$PROJECT_DIR$/shake/TouchNode.swift" />
-        <option value="$PROJECT_DIR$/shake/GameScene.swift" />
         <option value="$PROJECT_DIR$/shake/Touchable.swift" />
+        <option value="$PROJECT_DIR$/shake/IdentifierElements.swift" />
+        <option value="$PROJECT_DIR$/shake/ColorHandler.swift" />
+        <option value="$PROJECT_DIR$/shake/GameScene.swift" />
+        <option value="$PROJECT_DIR$/shake/PeripheralManager.swift" />
       </list>
     </option>
   </component>
@@ -205,7 +221,7 @@
       <workItem from="1559884696834" duration="3779000" />
       <workItem from="1560136333426" duration="385000" />
       <workItem from="1560238804313" duration="13236000" />
-      <workItem from="1560317083028" duration="28867000" />
+      <workItem from="1560317083028" duration="33802000" />
     </task>
     <task id="LOCAL-00001" summary="isGray: computed property to func">
       <created>1560504027901</created>
@@ -256,23 +272,65 @@
       <option name="project" value="LOCAL" />
       <updated>1560526338957</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add struct Palette">
+      <created>1560560657014</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1560560657014</updated>
+    </task>
+    <task id="LOCAL-00009" summary="make nodes(palettes) touchable">
+      <created>1560560758045</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1560560758045</updated>
+    </task>
+    <task id="LOCAL-00010" summary="minor: IDE">
+      <created>1560560775073</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1560560775073</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add HexTripletColor.stringDescription&#10;output is like; &quot;8a2b44&quot;">
+      <created>1560565481481</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1560565481481</updated>
+    </task>
+    <task id="LOCAL-00012" summary="make Palette typealias">
+      <created>1560565527969</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1560565527969</updated>
+    </task>
+    <task id="LOCAL-00013" summary="gather hardcoded values">
+      <created>1560565574211</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1560565574211</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58901000" />
+    <option name="totallyTimeSpent" value="63836000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="24" width="1680" height="939" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26251528" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26251528" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3293979" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3293979" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -281,7 +339,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3293979" />
+      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.3293979" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -300,7 +358,14 @@
     <MESSAGE value="fix color list handling" />
     <MESSAGE value="fix known color-list handling" />
     <MESSAGE value="minor: IDE files" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor: IDE files" />
+    <MESSAGE value="add struct Palette" />
+    <MESSAGE value="make nodes(palettes) touchable" />
+    <MESSAGE value="minor: IDE" />
+    <MESSAGE value="add HexTripletColor.stringDescription&#10;output is like; &quot;8a2b44&quot;" />
+    <MESSAGE value="make Palette typealias" />
+    <MESSAGE value="gather hardcoded values" />
+    <MESSAGE value="make iBeacon transmitter" />
+    <option name="LAST_COMMIT_MESSAGE" value="make iBeacon transmitter" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.swift" />
@@ -377,43 +442,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shake/GameViewController.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-          <folding>
-            <element signature="e#144#156#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shake/GameScene.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="136" column="5" lean-forward="true" selection-start-line="136" selection-start-column="5" selection-end-line="136" selection-end-column="5" />
-          <folding>
-            <element signature="e#135#151#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shake/PeripheralManager.swift">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/Resources/module_cache_10E1001.zip!/5.0.1/x86_64/iphonesimulator12.2/SpriteKit.SKShapeNode/SpriteKit.SKShapeNode.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shake/Touchable.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#102#119#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -431,12 +463,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shake/ColorHandler.swift">
+    <entry file="file://$PROJECT_DIR$/shake/IdentifierElements.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2299">
-          <caret line="121" selection-start-line="121" selection-end-line="121" />
+        <state relative-caret-position="247">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shake/Touchable.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="84" selection-start-line="15" selection-start-column="84" selection-end-line="15" selection-end-column="84" />
           <folding>
             <element signature="e#102#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shake/ColorHandler.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="54" column="5" lean-forward="true" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+          <folding>
+            <element signature="e#102#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shake/GameViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-126">
+          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+          <folding>
+            <element signature="e#144#156#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shake/GameScene.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding>
+            <element signature="e#135#151#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shake/PeripheralManager.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="28" column="87" selection-start-line="28" selection-start-column="87" selection-end-line="28" selection-end-column="87" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
           </folding>
         </state>
       </provider>
