@@ -50,6 +50,10 @@ struct HexTripletColor: Hashable {
         )
     }
 
+    var stringDescription: String {
+        return [self.red, self.green, self.blue].map{ n in String(n, radix: 16, uppercase: false) }.joined()
+    }
+
     func isGray(sumThreshold: Int) -> Bool {
         if abs(Int(self.red) - Int(self.green))
                    + abs(Int(self.green) - Int(self.blue))
@@ -112,10 +116,4 @@ struct ColorSelector {
         }
         return selectedColor.removeFirst()
     }
-}
-
-
-struct Palette {
-    var pos: CGPoint
-    var color: HexTripletColor
 }
