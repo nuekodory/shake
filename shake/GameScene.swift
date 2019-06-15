@@ -10,15 +10,19 @@ import SpriteKit
 import GameplayKit
 import os.log
 
+
+typealias Palette = (Int, CGPoint, HexTripletColor)
+
 class GameScene: SKScene {
 
+    private var peripheralManager : PeripheralHandler!
+    private var centralManager : CentralManager!
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
     private var circleNode : SKTouchableShapeNode?
-    private var palettes : [(CGPoint, HexTripletColor)]!
+    private var palettes : [Palette]!
 
     private var colorSelector = ColorSelector()
-    lazy var centralManager = CentralManager()
     private var touchGeneratedNodes = Array<SKShapeNode>()
 
     let maxNumberOfCircles = 5
@@ -26,7 +30,7 @@ class GameScene: SKScene {
     override func sceneDidLoad() {
         super.sceneDidLoad()
         centralManager = CentralManager()
-
+        peripheralManager = PeripheralHandler()
     }
 
     override func didMove(to view: SKView) {
@@ -60,11 +64,8 @@ class GameScene: SKScene {
             CGPoint(x:  r*2, y: -r*3)
         ]
 
-        palettes = palettePositions.map{ pos in
-            let color = colorSelector.generateColor()
-            placePalette(parentNode: self.circleNode, atPoint: pos, hexColor: color)
-            return (pos, color)
-        }
+        palettes = (0..<4).map { index in (index, palettePositions[index], colorSelector.generateColor()) }
+
     }
     
     
@@ -123,11 +124,13 @@ class GameScene: SKScene {
     }
 
 
-    private func placePalette(parentNode: SKTouchableShapeNode?, atPoint pos: CGPoint, hexColor: HexTripletColor) {
+    private func placePalette(parentNode: SKTouchableShapeNode?, palette: Palette) {
         let node = parentNode?.copy() as! SKTouchableShapeNode?
+        let (index, pos, hexColor) = palette
 
         if let node = node {
             print("pos: \(pos), color: \(hexColor)")
+            node.name = "circleNodeIndexed::\(index)"
             node.position = pos
             node.fillColor = hexColor.uiColor
             node.run(SKAction.fadeIn(withDuration: 0.2))
@@ -141,7 +144,7 @@ class GameScene: SKScene {
         let deletionNumber = max(0, nodes.count - keep - 1)
         print("deletionNumber: \(deletionNumber)")
 
-        for _ in 0..<deletionNumber {
+        (0..<deletionNumber).forEach { _ in
             let oldestNode = nodes.removeFirst()
             oldestNode.run(SKAction.sequence([
                 .group([.fadeOut(withDuration: 0.5), .scale(by: 0.0, duration: 0.5)]),
