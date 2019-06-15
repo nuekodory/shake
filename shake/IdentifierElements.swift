@@ -11,3 +11,8 @@ struct ShakeAppIdentifier {
             UUID(uuidVersion: 5, namespace: UUID.namespace.DNS, name: "palette.color.shake.sohzoh.com")!
     static let beaconIdPrefix = "com.sohzoh.shake."
 }
+
+extension Notification.Name {
+    static let newReceivedColor = Notification.Name("com.sohzoh.shake.newReceivedColor")
+    static let paletteTouchDown = Notification.Name("com.sohzoh.shake.paletteTouchDown")
+}

@@ -13,6 +13,6 @@ class SKTouchableShapeNode: SKShapeNode {
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        peripheralHandler?.advertiseSelectedColor(color: HexTripletColor, duration: )
+        NotificationCenter.default.post(name: .paletteTouchDown, object: self)
     }
 }
