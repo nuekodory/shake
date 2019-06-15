@@ -33,6 +33,29 @@ struct HexTripletColor: Hashable {
         blue = UInt8.random(in: 0...255)
     }
 
+    init(red: UInt8, green: UInt8, blue: UInt8) {
+        self.red = red
+        self.green = green
+        self.blue = blue
+    }
+
+    init?(hexTriplet s: String) {
+        if s.count != 6 { return nil }
+        let stringSlices = [(0, 1), (2, 3), (4, 5)].map{ start, stop in
+            s[s.index(s.startIndex, offsetBy: start)...s.index(s.startIndex, offsetBy: stop)]
+        }
+
+        let numbers = stringSlices.compactMap{ s in UInt8(s, radix: 16) }
+
+        if numbers.count == 3 {
+            red = numbers[0]
+            green = numbers[1]
+            blue = numbers[2]
+            return
+        }
+        return nil
+    }
+
     func hash(into hasher: inout Hasher) {
         hasher.combine(red)
         hasher.combine(green)
@@ -92,7 +115,7 @@ extension Sequence where Element == HexTripletColor {
 
 
 struct ColorSelector {
-    var selectedColor = Set<HexTripletColor>()
+    var selectedColors = Set<HexTripletColor>()
     var maxCountGenerateTrial = 10000
     var thresholdDistanceSquare = 2000
     var grayThresholdSum = 32
@@ -100,7 +123,7 @@ struct ColorSelector {
     mutating func generateColor() -> HexTripletColor {
         var color = HexTripletColor()
         for _ in 0...maxCountGenerateTrial {
-            if selectedColor.isConflict(with: color, thresholdDistanceSquare: thresholdDistanceSquare) {
+            if selectedColors.isConflict(with: color, thresholdDistanceSquare: thresholdDistanceSquare) {
                 color = HexTripletColor()
                 continue
             } else {
@@ -109,11 +132,11 @@ struct ColorSelector {
                     color = HexTripletColor()
                     continue
                 } else {
-                    selectedColor.insert(color)
+                    selectedColors.insert(color)
                     return color
                 }
             }
         }
-        return selectedColor.removeFirst()
+        return selectedColors.removeFirst()
     }
 }
