@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c02974e-f582-4b4e-8f2c-4430a09d4b8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/shake/LocationHandler.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shake.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/shake.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shake/CentralManager.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shake/ColorHandler.swift" beforeDir="false" afterPath="$PROJECT_DIR$/shake/ColorHandler.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shake/GameScene.swift" beforeDir="false" afterPath="$PROJECT_DIR$/shake/GameScene.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shake/IdentifierElements.swift" beforeDir="false" afterPath="$PROJECT_DIR$/shake/IdentifierElements.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shake/PeripheralManager.swift" beforeDir="false" afterPath="$PROJECT_DIR$/shake/PeripheralHandler.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shake/Touchable.swift" beforeDir="false" afterPath="$PROJECT_DIR$/shake/Touchable.swift" afterDir="false" />
-    </list>
+    <list default="true" id="1c02974e-f582-4b4e-8f2c-4430a09d4b8f" name="Default Changelist" comment="" />
     <ignored path="$USER_HOME$/Library/Caches/AppCode2019.1/DerivedData/shake-cslnjqbzovssoqbsscbdtaveyxpv/Build/Intermediates.noindex/" />
     <ignored path="$USER_HOME$/Library/Caches/AppCode2019.1/DerivedData/shake-fnloqdzpbmsnptbrwwedspmawrtv/Build/Intermediates.noindex/" />
     <ignored path="$USER_HOME$/Library/Caches/AppCode2019.1/DerivedData/shake-dctqcnakamlvaafehxyrqxmuscrb/Build/Intermediates.noindex/" />
@@ -27,12 +17,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/shake/GameScene.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="52" column="85" selection-start-line="52" selection-start-column="85" selection-end-line="52" selection-end-column="85" />
+            <state relative-caret-position="1127">
+              <caret line="145" column="33" selection-start-line="145" selection-start-column="33" selection-end-line="145" selection-end-column="33" />
               <folding>
                 <element signature="e#135#151#0" expanded="true" />
-                <element signature="e#1727#1763#1" />
-                <element signature="e#1775#1819#1" />
               </folding>
             </state>
           </provider>
@@ -131,8 +119,8 @@
         <option value="$PROJECT_DIR$/shake/PeripheralManager.swift" />
         <option value="$PROJECT_DIR$/shake/IdentifierElements.swift" />
         <option value="$PROJECT_DIR$/shake/Touchable.swift" />
-        <option value="$PROJECT_DIR$/shake/GameScene.swift" />
         <option value="$PROJECT_DIR$/shake/ColorHandler.swift" />
+        <option value="$PROJECT_DIR$/shake/GameScene.swift" />
       </list>
     </option>
   </component>
@@ -220,7 +208,7 @@
       <workItem from="1559884696834" duration="3779000" />
       <workItem from="1560136333426" duration="385000" />
       <workItem from="1560238804313" duration="13236000" />
-      <workItem from="1560317083028" duration="42474000" />
+      <workItem from="1560317083028" duration="42748000" />
     </task>
     <task id="LOCAL-00001" summary="isGray: computed property to func">
       <created>1560504027901</created>
@@ -327,11 +315,32 @@
       <option name="project" value="LOCAL" />
       <updated>1560565735039</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="change CentralManager to LocationManager to handle with iBeacon">
+      <created>1560574745579</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1560574745579</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add HexTripletColor initializer from String">
+      <created>1560574779884</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1560574779884</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add Notification observers&#10;remove CentralManager">
+      <created>1560574813849</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1560574813849</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72508000" />
+    <option name="totallyTimeSpent" value="72782000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-62" y="25" width="1680" height="939" extended-state="0" />
@@ -343,7 +352,7 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293979" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3293979" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3293979" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -352,7 +361,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.3293979" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3293979" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -379,7 +388,10 @@
     <MESSAGE value="gather hardcoded values" />
     <MESSAGE value="make iBeacon transmitter" />
     <MESSAGE value="touch event -&gt; transmit" />
-    <option name="LAST_COMMIT_MESSAGE" value="touch event -&gt; transmit" />
+    <MESSAGE value="change CentralManager to LocationManager to handle with iBeacon" />
+    <MESSAGE value="add HexTripletColor initializer from String" />
+    <MESSAGE value="add Notification observers&#10;remove CentralManager" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Notification observers&#10;remove CentralManager" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.swift" />
@@ -536,12 +548,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/shake/GameScene.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="52" column="85" selection-start-line="52" selection-start-column="85" selection-end-line="52" selection-end-column="85" />
+        <state relative-caret-position="1127">
+          <caret line="145" column="33" selection-start-line="145" selection-start-column="33" selection-end-line="145" selection-end-column="33" />
           <folding>
             <element signature="e#135#151#0" expanded="true" />
-            <element signature="e#1727#1763#1" />
-            <element signature="e#1775#1819#1" />
           </folding>
         </state>
       </provider>
