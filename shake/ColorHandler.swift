@@ -26,6 +26,7 @@ struct HexTripletColor: Hashable {
     var red: UInt8
     var green: UInt8
     var blue: UInt8
+    var timeStamp: UInt8?
 
     init() {
         red = UInt8.random(in: 0...255)
@@ -33,13 +34,15 @@ struct HexTripletColor: Hashable {
         blue = UInt8.random(in: 0...255)
     }
 
-    init(red: UInt8, green: UInt8, blue: UInt8) {
+    init(red: UInt8, green: UInt8, blue: UInt8, timeStamp: UInt8? = nil) {
         self.red = red
         self.green = green
         self.blue = blue
+        self.timeStamp = timeStamp
     }
 
-    init?(hexTriplet s: String) {
+    init?(hexTriplet s: String?) {
+        guard let s = s else { return nil }
         if s.count != 6 { return nil }
         let stringSlices = [(0, 1), (2, 3), (4, 5)].map{ start, stop in
             s[s.index(s.startIndex, offsetBy: start)...s.index(s.startIndex, offsetBy: stop)]
@@ -60,6 +63,7 @@ struct HexTripletColor: Hashable {
         hasher.combine(red)
         hasher.combine(green)
         hasher.combine(blue)
+        hasher.combine(timeStamp)
     }
 
     var uiColor: UIColor {
@@ -88,7 +92,7 @@ struct HexTripletColor: Hashable {
     }
 
     static func == (lhs: HexTripletColor, rhs: HexTripletColor) -> Bool {
-        return lhs.red == rhs.red && lhs.green == rhs.green && lhs.blue == rhs.blue
+        return lhs.red == rhs.red && lhs.green == rhs.green && lhs.blue == rhs.blue && lhs.timeStamp == rhs.timeStamp
     }
 
     static func - (lhs: HexTripletColor, rhs: HexTripletColor) -> Int {

@@ -18,13 +18,17 @@ class PeripheralHandler: NSObject, CBPeripheralManagerDelegate {
 
     func advertiseSelectedColor(color: HexTripletColor) {
 
+        let timeStamp = Int(Date().timeIntervalSince1970 * 100) % 0x0100
+
         let beaconRegion = CLBeaconRegion(
                 proximityUUID: ShakeAppIdentifier.selectedInPalette,
                 major: UInt16(color.red) * 0x0100 + UInt16(color.green),
-                minor: UInt16(color.blue) * 0x0100,
+                minor: UInt16(color.blue) * 0x0100 + UInt16(timeStamp),
                 identifier: ShakeAppIdentifier.beaconIdPrefix + color.stringDescription
         )
+        print(beaconRegion)
 
+        manager.stopAdvertising()
         manager.startAdvertising(
                 beaconRegion.peripheralData(withMeasuredPower: nil) as NSDictionary as? [String: Any]
         )

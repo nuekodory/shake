@@ -8,6 +8,7 @@
 
 import SpriteKit
 import GameplayKit
+import CoreLocation
 import os.log
 
 
@@ -16,12 +17,16 @@ typealias Palette = (CGPoint, HexTripletColor)
 class GameScene: SKScene {
 
     private var peripheralHandler: PeripheralHandler!
+    private var locationHandler: LocationHandler!
     private var label : SKLabelNode?
-    private var circleNode : SKTouchableShapeNode?
+    private var paletteNode: SKTouchableShapeNode?
+    private var ballNode: SKTouchableShapeNode?
     private var palettes : [Palette]!
 
+    var receivedColor = Set<HexTripletColor>()
     private var colorSelector = ColorSelector()
-    private var bouncingNodes = [SKShapeNode]()
+    private var ballNodes = [SKShapeNode]()
+    private var numPaletteTouch = 0
 
     let maxNumberOfCircles = 5
 
@@ -34,6 +39,8 @@ class GameScene: SKScene {
     override func sceneDidLoad() {
         super.sceneDidLoad()
         peripheralHandler = PeripheralHandler()
+        locationHandler = LocationHandler()
+        self.backgroundColor = .white
     }
 
     override func didMove(to view: SKView) {
@@ -41,16 +48,34 @@ class GameScene: SKScene {
         NotificationCenter.default.addObserver(forName: .newReceivedColor, object: nil, queue: nil,
                 using: { notification in
                     if let color = notification.object as? HexTripletColor {
-                        self.drawNewCircle(shapeNode: self.circleNode, at: self.randomPosition, color: color)
+                        if self.receivedColor.insert(color).inserted {
+                            self.drawNewCircle(shapeNode: self.ballNode, at: self.randomPosition, color: color)
+                        }
                     }
                 })
 
         NotificationCenter.default.addObserver(forName: .paletteTouchDown, object: nil, queue: nil,
                 using: { notification in
                     if let node = notification.object as? SKTouchableShapeNode {
-                        let hexColor = self.colorSelector.generateColor()
-                        node.name = hexColor.stringDescription
-                        node.run(SKAction.colorize(with: hexColor.uiColor, colorBlendFactor: 1.0, duration: 0.8))
+                        if let nodeColor = HexTripletColor(hexTriplet: node.name) {
+                            self.peripheralHandler.advertiseSelectedColor(color: nodeColor)
+                        }
+
+                        self.numPaletteTouch += 1
+                        if self.numPaletteTouch <= 10 {
+                            return
+                        } else {
+                            node.run(.sequence([
+                                .fadeOut(withDuration: 0.2),
+                                .run{
+                                    let nextColor = self.colorSelector.generateColor()
+                                    node.fillColor = nextColor.uiColor
+                                    node.name = nextColor.stringDescription
+                                },
+                                .fadeIn(withDuration: 0.4)
+                            ]))
+                            self.numPaletteTouch = 0
+                        }
                     }
                 })
 
@@ -68,14 +93,11 @@ class GameScene: SKScene {
 
         // create circle-shaped, palette-like node
         let r = (self.size.width + self.size.height) * 0.05
-        self.circleNode = SKTouchableShapeNode.init(circleOfRadius: r)
-        self.circleNode?.peripheralHandler = peripheralHandler
+        self.paletteNode = SKTouchableShapeNode.init(circleOfRadius: r)
+        self.ballNode = SKTouchableShapeNode.init(circleOfRadius: r * 0.6)
 
-        if let circleNode = self.circleNode {
-            circleNode.fillColor = UIColor.clear
-        }
-
-        print("W: \(self.size.width) H: \(self.size.height) R: \(r)")
+        paletteNode?.fillColor = UIColor.clear
+        ballNode?.fillColor = UIColor.clear
 
         // place palettes
         let palettePositions: Array<CGPoint> = [
@@ -86,25 +108,28 @@ class GameScene: SKScene {
         ]
 
         palettes = palettePositions.map { pos in (pos, colorSelector.generateColor()) }
-
+        palettes.forEach{ placePalette(copyingNode: self.paletteNode, palette: $0) }
+        locationHandler.manager.requestWhenInUseAuthorization()
     }
     
     
     func touchDown(atPoint pos : CGPoint) {
-        removeOldNode(nodes: &bouncingNodes, numNodesToKeep: 5)
-
+        removeOldNode(nodes: &ballNodes, numNodesToKeep: 5)
         let generatedColor = colorSelector.generateColor()
-        drawNewCircle(shapeNode: self.circleNode, at: pos, color: generatedColor)
+        drawNewCircle(shapeNode: self.ballNode, at: pos, color: generatedColor, alpha: 0.6)
     }
 
-    func drawNewCircle(shapeNode: SKShapeNode?, at pos: CGPoint, color: HexTripletColor) {
+    func drawNewCircle(shapeNode: SKShapeNode?, at pos: CGPoint, color: HexTripletColor, alpha: CGFloat = 1.0) {
         colorSelector.selectedColors.insert(color)
 
         if let newNode = shapeNode?.copy() as! SKShapeNode? {
-            newNode.fillColor = color.uiColor
             newNode.position = pos
+            newNode.fillColor = color.uiColor.withAlphaComponent(alpha)
+            newNode.run(.sequence([
+                .fadeIn(withDuration: 0.05),
+            ]))
             self.addChild(newNode)
-            self.bouncingNodes.append(newNode)
+            self.ballNodes.append(newNode)
         }
     }
     
@@ -117,10 +142,6 @@ class GameScene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let label = self.label {
-            label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
-        }
-        
         for t in touches { self.touchDown(atPoint: t.location(in: self)) }
     }
     
@@ -138,7 +159,7 @@ class GameScene: SKScene {
     
     
     override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
+
     }
 
 

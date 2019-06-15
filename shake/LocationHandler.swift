@@ -14,6 +14,11 @@ class LocationHandler: NSObject, CLLocationManagerDelegate {
         super.init()
         manager = CLLocationManager()
         manager.delegate = self
+
+        manager.startRangingBeacons(in: CLBeaconRegion(
+                proximityUUID: ShakeAppIdentifier.selectedInPalette,
+                identifier: "selectedInPalette"
+        ))
     }
 
     func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
@@ -25,7 +30,8 @@ class LocationHandler: NSObject, CLLocationManagerDelegate {
         return HexTripletColor(
                 red:   UInt8(major.intValue / 0x0100),
                 green: UInt8(major.intValue % 0x0100),
-                blue:  UInt8(minor.intValue / 0x0100)
+                blue:  UInt8(minor.intValue / 0x0100),
+                timeStamp: UInt8(minor.intValue % 0x0100)
         )
     }
 }

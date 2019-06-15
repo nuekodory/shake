@@ -23,6 +23,7 @@
 		CB0875D7E52FEEB7163674D7 /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB087C01AA265ADD528FF200 /* LocationHandler.swift */; };
 		CB087A1D6FFFE74668ABE33E /* ColorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB08730941EEC3A147F78F06 /* ColorHandler.swift */; };
 		CB087A302BF2F23D2686ECEF /* Touchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB087575D76CE06AB8EC73E7 /* Touchable.swift */; };
+		CB087D4CEA7FA181CCAA6401 /* NodeMovings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0879912DF7C06F90771535 /* NodeMovings.swift */; };
 		CB087DE0BFB76822C1CBF7D5 /* IdentifierElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0875C6E7937411DD0BC8CD /* IdentifierElements.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		CB08730941EEC3A147F78F06 /* ColorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorHandler.swift; sourceTree = "<group>"; };
 		CB087575D76CE06AB8EC73E7 /* Touchable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Touchable.swift; sourceTree = "<group>"; };
 		CB0875C6E7937411DD0BC8CD /* IdentifierElements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentifierElements.swift; sourceTree = "<group>"; };
+		CB0879912DF7C06F90771535 /* NodeMovings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeMovings.swift; sourceTree = "<group>"; };
 		CB087C01AA265ADD528FF200 /* LocationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +115,7 @@
 				CB087575D76CE06AB8EC73E7 /* Touchable.swift */,
 				CB0875C6E7937411DD0BC8CD /* IdentifierElements.swift */,
 				CB087C01AA265ADD528FF200 /* LocationHandler.swift */,
+				CB0879912DF7C06F90771535 /* NodeMovings.swift */,
 			);
 			path = shake;
 			sourceTree = "<group>";
@@ -219,13 +222,17 @@
 			attributes = {
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = sohzoh;
+				TargetAttributes = {
+					478EF32F46D85E5F9990AA0A = {
+						DevelopmentTeam = 8735X43ZMY;
+					};
+				};
 			};
 			buildConfigurationList = 478EFEA99DE4D29E1E4533C3 /* Build configuration list for PBXProject "shake" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -293,6 +300,7 @@
 				CB087A302BF2F23D2686ECEF /* Touchable.swift in Sources */,
 				CB087DE0BFB76822C1CBF7D5 /* IdentifierElements.swift in Sources */,
 				CB0875D7E52FEEB7163674D7 /* LocationHandler.swift in Sources */,
+				CB087D4CEA7FA181CCAA6401 /* NodeMovings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8735X43ZMY;
 				INFOPLIST_FILE = shake/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sohzoh.shake;
@@ -472,6 +481,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8735X43ZMY;
 				INFOPLIST_FILE = shake/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sohzoh.shake;

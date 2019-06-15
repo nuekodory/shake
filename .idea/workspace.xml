@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c02974e-f582-4b4e-8f2c-4430a09d4b8f" name="Default Changelist" comment="" />
+    <list default="true" id="1c02974e-f582-4b4e-8f2c-4430a09d4b8f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/shake/NodeMovings.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shake.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/shake.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shake.xcworkspace/xcuserdata/nuekodory.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/shake.xcworkspace/xcuserdata/nuekodory.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shake/ColorHandler.swift" beforeDir="false" afterPath="$PROJECT_DIR$/shake/ColorHandler.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shake/GameScene.swift" beforeDir="false" afterPath="$PROJECT_DIR$/shake/GameScene.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shake/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/shake/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shake/LocationHandler.swift" beforeDir="false" afterPath="$PROJECT_DIR$/shake/LocationHandler.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shake/PeripheralHandler.swift" beforeDir="false" afterPath="$PROJECT_DIR$/shake/PeripheralHandler.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shake/Touchable.swift" beforeDir="false" afterPath="$PROJECT_DIR$/shake/Touchable.swift" afterDir="false" />
+    </list>
     <ignored path="$USER_HOME$/Library/Caches/AppCode2019.1/DerivedData/shake-cslnjqbzovssoqbsscbdtaveyxpv/Build/Intermediates.noindex/" />
     <ignored path="$USER_HOME$/Library/Caches/AppCode2019.1/DerivedData/shake-fnloqdzpbmsnptbrwwedspmawrtv/Build/Intermediates.noindex/" />
     <ignored path="$USER_HOME$/Library/Caches/AppCode2019.1/DerivedData/shake-dctqcnakamlvaafehxyrqxmuscrb/Build/Intermediates.noindex/" />
@@ -11,14 +22,14 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_73FC46C5-4ABD-4CE8-A39C-BE24A008D983" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_36988ca0ee3ef853b185d1a2ea0b3964e8d7070f" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shake/GameScene.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1127">
-              <caret line="145" column="33" selection-start-line="145" selection-start-column="33" selection-end-line="145" selection-end-column="33" />
+            <state relative-caret-position="-1704">
+              <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
               <folding>
                 <element signature="e#135#151#0" expanded="true" />
               </folding>
@@ -27,10 +38,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shake/NodeMovings.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-11">
+              <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+              <folding>
+                <element signature="e#102#119#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shake/Touchable.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+            <state relative-caret-position="247">
+              <caret line="13" column="69" selection-start-line="13" selection-start-column="69" selection-end-line="13" selection-end-column="69" />
               <folding>
                 <element signature="e#102#119#0" expanded="true" />
               </folding>
@@ -41,8 +64,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shake/ColorHandler.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="133" column="24" lean-forward="true" selection-start-line="133" selection-start-column="24" selection-end-line="133" selection-end-column="24" />
+            <state relative-caret-position="1036">
+              <caret line="120" column="13" lean-forward="true" selection-start-line="120" selection-start-column="13" selection-end-line="120" selection-end-column="13" />
               <folding>
                 <element signature="e#102#119#0" expanded="true" />
               </folding>
@@ -50,23 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shake/GameViewController.swift">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="35" column="19" lean-forward="true" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
-              <folding>
-                <element signature="e#144#156#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/shake/PeripheralHandler.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+            <state relative-caret-position="461">
+              <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -77,8 +88,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shake/LocationHandler.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+            <state relative-caret-position="627">
+              <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
               <folding>
                 <element signature="e#102#119#0" expanded="true" />
               </folding>
@@ -89,8 +100,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shake/IdentifierElements.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="171">
+              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -115,18 +126,20 @@
         <option value="$PROJECT_DIR$/shake/CentralManager.swift" />
         <option value="$PROJECT_DIR$/shake/GenRandom.swift" />
         <option value="$PROJECT_DIR$/shake/TouchNode.swift" />
-        <option value="$PROJECT_DIR$/shake/LocationHandler.swift" />
         <option value="$PROJECT_DIR$/shake/PeripheralManager.swift" />
         <option value="$PROJECT_DIR$/shake/IdentifierElements.swift" />
         <option value="$PROJECT_DIR$/shake/Touchable.swift" />
-        <option value="$PROJECT_DIR$/shake/ColorHandler.swift" />
+        <option value="$PROJECT_DIR$/shake/NodeMovings.swift" />
         <option value="$PROJECT_DIR$/shake/GameScene.swift" />
+        <option value="$PROJECT_DIR$/shake/ColorHandler.swift" />
+        <option value="$PROJECT_DIR$/shake/LocationHandler.swift" />
+        <option value="$PROJECT_DIR$/shake/PeripheralHandler.swift" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-62" />
-    <option name="y" value="25" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-16" />
+    <option name="y" value="23" />
     <option name="width" value="1680" />
     <option name="height" value="939" />
   </component>
@@ -136,8 +149,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Cidr.FilesView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -159,6 +170,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Cidr.FilesView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -208,7 +221,10 @@
       <workItem from="1559884696834" duration="3779000" />
       <workItem from="1560136333426" duration="385000" />
       <workItem from="1560238804313" duration="13236000" />
-      <workItem from="1560317083028" duration="42748000" />
+      <workItem from="1560317083028" duration="47786000" />
+      <workItem from="1560583914084" duration="850000" />
+      <workItem from="1560584941273" duration="971000" />
+      <workItem from="1560586480477" duration="2291000" />
     </task>
     <task id="LOCAL-00001" summary="isGray: computed property to func">
       <created>1560504027901</created>
@@ -336,24 +352,52 @@
       <option name="project" value="LOCAL" />
       <updated>1560574813849</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="add Notification observers&#10;remove CentralManager">
+      <created>1560574872691</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1560574872691</updated>
+    </task>
+    <task id="LOCAL-00020" summary="add Notification post">
+      <created>1560574896246</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1560574896246</updated>
+    </task>
+    <task id="LOCAL-00021" summary="minor: add debug print">
+      <created>1560574922137</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1560574922137</updated>
+    </task>
+    <task id="LOCAL-00022" summary="minor: IDE">
+      <created>1560574929253</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1560574929253</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72782000" />
+    <option name="totallyTimeSpent" value="81932000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-62" y="25" width="1680" height="939" extended-state="0" />
+    <frame x="-16" y="23" width="1680" height="939" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26251528" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2716728" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293979" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3293979" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39905548" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -382,7 +426,6 @@
     <MESSAGE value="minor: IDE files" />
     <MESSAGE value="add struct Palette" />
     <MESSAGE value="make nodes(palettes) touchable" />
-    <MESSAGE value="minor: IDE" />
     <MESSAGE value="add HexTripletColor.stringDescription&#10;output is like; &quot;8a2b44&quot;" />
     <MESSAGE value="make Palette typealias" />
     <MESSAGE value="gather hardcoded values" />
@@ -391,7 +434,10 @@
     <MESSAGE value="change CentralManager to LocationManager to handle with iBeacon" />
     <MESSAGE value="add HexTripletColor initializer from String" />
     <MESSAGE value="add Notification observers&#10;remove CentralManager" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Notification observers&#10;remove CentralManager" />
+    <MESSAGE value="add Notification post" />
+    <MESSAGE value="minor: add debug print" />
+    <MESSAGE value="minor: IDE" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor: IDE" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.swift" />
@@ -437,13 +483,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/Resources/module_cache_10E1001.zip!/5.0.1/x86_64/iphonesimulator12.2/CoreGraphics/CoreGraphics.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-28">
-          <caret line="31" column="13" lean-forward="true" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/Resources/module_cache_10E1001.zip!/5.0.1/x86_64/iphonesimulator12.2/SpriteKit/SpriteKit.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -465,16 +504,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shake/CentralManager.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#102#119#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/shake/CentralManager.swift" />
     <entry file="jar://$APPLICATION_HOME_DIR$/Resources/module_cache_10E1001.zip!/5.0.1/x86_64/iphonesimulator12.2/CoreBluetooth.CBPeripheralManager/CoreBluetooth.CBPeripheralManager.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -489,30 +519,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shake/LocationHandler.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
-          <folding>
-            <element signature="e#102#119#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shake/PeripheralHandler.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shake/GameViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="35" column="19" lean-forward="true" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+        <state relative-caret-position="483">
+          <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
           <folding>
             <element signature="e#144#156#0" expanded="true" />
           </folding>
@@ -521,25 +531,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/shake/IdentifierElements.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="171">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shake/ColorHandler.swift">
+    <entry file="jar://$APPLICATION_HOME_DIR$/Resources/module_cache_10E1001.zip!/5.0.1/x86_64/iphonesimulator12.2/CoreGraphics/CoreGraphics.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="133" column="24" lean-forward="true" selection-start-line="133" selection-start-column="24" selection-end-line="133" selection-end-column="24" />
+        <state relative-caret-position="-72">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/Resources/module_cache_10E1001.zip!/5.0.1/x86_64/iphonesimulator12.2/Swift/Collection.HashedCollections.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shake/LocationHandler.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
           <folding>
             <element signature="e#102#119#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shake/Touchable.swift">
+    <entry file="file://$PROJECT_DIR$/shake/NodeMovings.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        <state relative-caret-position="-11">
+          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
           <folding>
             <element signature="e#102#119#0" expanded="true" />
           </folding>
@@ -548,10 +572,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/shake/GameScene.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1127">
-          <caret line="145" column="33" selection-start-line="145" selection-start-column="33" selection-end-line="145" selection-end-column="33" />
+        <state relative-caret-position="-1704">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
           <folding>
             <element signature="e#135#151#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shake/Touchable.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="69" selection-start-line="13" selection-start-column="69" selection-end-line="13" selection-end-column="69" />
+          <folding>
+            <element signature="e#102#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shake/ColorHandler.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1036">
+          <caret line="120" column="13" lean-forward="true" selection-start-line="120" selection-start-column="13" selection-end-line="120" selection-end-column="13" />
+          <folding>
+            <element signature="e#102#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shake/PeripheralHandler.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
           </folding>
         </state>
       </provider>
