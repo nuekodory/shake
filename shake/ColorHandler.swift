@@ -113,3 +113,9 @@ struct ColorSelector {
         return selectedColor.removeFirst()
     }
 }
+
+
+struct Palette {
+    var pos: CGPoint
+    var color: HexTripletColor
+}
