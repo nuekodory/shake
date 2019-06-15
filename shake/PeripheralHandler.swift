@@ -13,10 +13,10 @@ class PeripheralHandler: NSObject, CBPeripheralManagerDelegate {
 
 
     func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
-
+        print(peripheral.state)
     }
 
-    func advertisingSelectedColor(color: HexTripletColor, duration: TimeInterval) {
+    func advertiseSelectedColor(color: HexTripletColor) {
 
         let beaconRegion = CLBeaconRegion(
                 proximityUUID: ShakeAppIdentifier.selectedInPalette,
