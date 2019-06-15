@@ -22,6 +22,7 @@
 		478EFF1AA7FC5DCAC4F30808 /* PeripheralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478EFF3976B0F682CC23D4C4 /* PeripheralManager.swift */; };
 		478EFF3940DB1766AB8B8CD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 478EFD2BFEF0FFC499B33557 /* LaunchScreen.storyboard */; };
 		CB087A1D6FFFE74668ABE33E /* ColorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB08730941EEC3A147F78F06 /* ColorHandler.swift */; };
+		CB087A302BF2F23D2686ECEF /* Touchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB087575D76CE06AB8EC73E7 /* Touchable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		478EFF3976B0F682CC23D4C4 /* PeripheralManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralManager.swift; sourceTree = "<group>"; };
 		478EFFA5A7B7BDEEFB08E442 /* shake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB08730941EEC3A147F78F06 /* ColorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorHandler.swift; sourceTree = "<group>"; };
+		CB087575D76CE06AB8EC73E7 /* Touchable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Touchable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				478EF2850E44A91A4D22BAAF /* UUIDValues.swift */,
 				478EF9CF9016729BE727C2EA /* UUIDv3v5.swift */,
 				CB08730941EEC3A147F78F06 /* ColorHandler.swift */,
+				CB087575D76CE06AB8EC73E7 /* Touchable.swift */,
 			);
 			path = shake;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				478EFEB7AAD4F651B2932F5A /* UUIDValues.swift in Sources */,
 				478EF1C83FA5A4076E452E6F /* UUIDv3v5.swift in Sources */,
 				CB087A1D6FFFE74668ABE33E /* ColorHandler.swift in Sources */,
+				CB087A302BF2F23D2686ECEF /* Touchable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
