@@ -11,29 +11,48 @@ import GameplayKit
 import os.log
 
 
-typealias Palette = (Int, CGPoint, HexTripletColor)
+typealias Palette = (CGPoint, HexTripletColor)
 
 class GameScene: SKScene {
 
-    private var peripheralManager : PeripheralHandler!
-    private var centralManager : CentralManager!
+    private var peripheralHandler: PeripheralHandler!
     private var label : SKLabelNode?
-    private var spinnyNode : SKShapeNode?
     private var circleNode : SKTouchableShapeNode?
     private var palettes : [Palette]!
 
     private var colorSelector = ColorSelector()
-    private var touchGeneratedNodes = Array<SKShapeNode>()
+    private var bouncingNodes = [SKShapeNode]()
 
     let maxNumberOfCircles = 5
 
+    var randomPosition: CGPoint {
+        let x = CGFloat.random(in: -self.size.width/2...self.size.width/2)
+        let y = CGFloat.random(in: -self.size.height/2...self.size.height/2)
+        return CGPoint(x: x, y: y)
+    }
+
     override func sceneDidLoad() {
         super.sceneDidLoad()
-        centralManager = CentralManager()
-        peripheralManager = PeripheralHandler()
+        peripheralHandler = PeripheralHandler()
     }
 
     override func didMove(to view: SKView) {
+
+        NotificationCenter.default.addObserver(forName: .newReceivedColor, object: nil, queue: nil,
+                using: { notification in
+                    if let color = notification.object as? HexTripletColor {
+                        self.drawNewCircle(shapeNode: self.circleNode, at: self.randomPosition, color: color)
+                    }
+                })
+
+        NotificationCenter.default.addObserver(forName: .paletteTouchDown, object: nil, queue: nil,
+                using: { notification in
+                    if let node = notification.object as? SKTouchableShapeNode {
+                        let hexColor = self.colorSelector.generateColor()
+                        node.name = hexColor.stringDescription
+                        node.run(SKAction.colorize(with: hexColor.uiColor, colorBlendFactor: 1.0, duration: 0.8))
+                    }
+                })
 
         // Get label node from scene and store it for use later
         self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
@@ -50,6 +69,8 @@ class GameScene: SKScene {
         // create circle-shaped, palette-like node
         let r = (self.size.width + self.size.height) * 0.05
         self.circleNode = SKTouchableShapeNode.init(circleOfRadius: r)
+        self.circleNode?.peripheralHandler = peripheralHandler
+
         if let circleNode = self.circleNode {
             circleNode.fillColor = UIColor.clear
         }
@@ -64,38 +85,35 @@ class GameScene: SKScene {
             CGPoint(x:  r*2, y: -r*3)
         ]
 
-        palettes = (0..<4).map { index in (index, palettePositions[index], colorSelector.generateColor()) }
+        palettes = palettePositions.map { pos in (pos, colorSelector.generateColor()) }
 
     }
     
     
     func touchDown(atPoint pos : CGPoint) {
-        removeOldNode(nodes: &touchGeneratedNodes, numNodesToKeep: 5)
-        print(pos)
+        removeOldNode(nodes: &bouncingNodes, numNodesToKeep: 5)
 
-        if let newNode = self.circleNode?.copy() as! SKShapeNode? {
-            let color = colorSelector.generateColor()
-            colorSelector.selectedColor.insert(color)
-            newNode.position = pos
+        let generatedColor = colorSelector.generateColor()
+        drawNewCircle(shapeNode: self.circleNode, at: pos, color: generatedColor)
+    }
+
+    func drawNewCircle(shapeNode: SKShapeNode?, at pos: CGPoint, color: HexTripletColor) {
+        colorSelector.selectedColors.insert(color)
+
+        if let newNode = shapeNode?.copy() as! SKShapeNode? {
             newNode.fillColor = color.uiColor
+            newNode.position = pos
             self.addChild(newNode)
-            self.touchGeneratedNodes.append(newNode)
+            self.bouncingNodes.append(newNode)
         }
     }
     
     func touchMoved(toPoint pos : CGPoint) {
-        if let currentNode = touchGeneratedNodes.last {
-            currentNode.position = pos
-        }
+
     }
     
     func touchUp(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            let color = HexTripletColor()
-            n.position = pos
-            n.strokeColor = UIColor(red: color.red, green: color.green, blue: color.blue)
-            self.addChild(n)
-        }
+
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -124,13 +142,12 @@ class GameScene: SKScene {
     }
 
 
-    private func placePalette(parentNode: SKTouchableShapeNode?, palette: Palette) {
-        let node = parentNode?.copy() as! SKTouchableShapeNode?
-        let (index, pos, hexColor) = palette
+    private func placePalette(copyingNode: SKTouchableShapeNode?, palette: Palette) {
+        let node = copyingNode?.copy() as! SKTouchableShapeNode?
+        let (pos, hexColor) = palette
 
         if let node = node {
-            print("pos: \(pos), color: \(hexColor)")
-            node.name = "circleNodeIndexed::\(index)"
+            node.name = hexColor.stringDescription
             node.position = pos
             node.fillColor = hexColor.uiColor
             node.run(SKAction.fadeIn(withDuration: 0.2))
